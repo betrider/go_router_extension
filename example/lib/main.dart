@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('go router exntension'),
         ),
-        body: const HomeScreen()
+        body: const HomeScreen(),
       ),
     );
   }
