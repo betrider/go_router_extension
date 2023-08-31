@@ -1,6 +1,6 @@
 # go_router_extension
 
-A new Flutter plugin project.
+This is an extension package that makes it easier to use the go_router package. (Working on)
 
 ## Getting Started
 
