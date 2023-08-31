@@ -6,3 +6,8 @@ class GoRouterExtension {
     return GoRouterExtensionPlatform.instance.getPlatformVersion();
   }
 }
+
+class ClassNameAnnotation {
+  final Type className;
+  const ClassNameAnnotation({required this.className});
+}
