@@ -1,6 +1,6 @@
 name: go_router_extension
 description: This is an extension package that makes it easier to use the go_router package
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/betrider/go_router_extension.git
 repository: https://github.com/betrider/go_router_extension.git
 
@@ -11,6 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  path: ^1.8.3
 
 dev_dependencies:
   flutter_test:

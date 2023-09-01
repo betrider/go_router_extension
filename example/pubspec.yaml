@@ -16,6 +16,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  path: ^1.8.3
 
   go_router_extension:
     # When depending on this package from a real application you should use:
