@@ -1,30 +1,8 @@
-
-
-class MyRoute {
-  
-  /// route path
-  final String path;
-
-  MyRoute(this.path);
-
-  /// Convert nested paths to one string
-  String build({
-    /// path param optional
-    Map<String, String> pathParameters = const <String, String>{},
-  }) {
-    String newPath = path;
-    for (final entry in pathParameters.entries) {
-      newPath = newPath.replaceAll(':${entry.key}', entry.value);
-    }
-    return newPath;
-  }
-}
-
 /// Route Path Generation Builder
-/// 
+///
 /// ```dart
 /// extension MyRouteBuilder on MyRoute {
-/// 
+///
 ///   // Main route → ----------------------------------- ↓ ↓
 ///
 ///   @PageLinkAnnotation(page: HomeScreen1)
@@ -45,8 +23,23 @@ class MyRoute {
 ///
 /// }
 /// ```
-extension MyRouteBuilder on MyRoute {
-  // ...
+class MyRoute {
+  /// route path
+  final String path;
+
+  MyRoute(this.path);
+
+  /// Convert nested paths to one string
+  String build({
+    /// path param optional
+    Map<String, String> pathParameters = const <String, String>{},
+  }) {
+    String newPath = path;
+    for (final entry in pathParameters.entries) {
+      newPath = newPath.replaceAll(':${entry.key}', entry.value);
+    }
+    return newPath;
+  }
 }
 
 /// Annotations for links
@@ -59,5 +52,9 @@ extension MyRouteBuilder on MyRoute {
 class PageLinkAnnotation {
   /// screen or page
   final Type page;
-  const PageLinkAnnotation({required this.page});
+  final String? description;
+  const PageLinkAnnotation({
+    required this.page,
+    this.description,
+  });
 }

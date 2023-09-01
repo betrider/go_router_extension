@@ -3,10 +3,10 @@ import 'package:go_router_extension/go_router_extension.dart';
 import 'package:path/path.dart';
 
 extension MyRouteBuilder on MyRoute {
-  @PageLinkAnnotation(page: HomeScreen)
+  @PageLinkAnnotation(page: HomeScreen, description: '홈 화면')
   static MyRoute get home => MyRoute('/home');
 
-  @PageLinkAnnotation(page: DetailScreen)
+  @PageLinkAnnotation(page: DetailScreen, description: '상세 화면')
   MyRoute get detail => MyRoute(join(path, 'detail'));
 }
 
